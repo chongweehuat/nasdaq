@@ -13,9 +13,12 @@ class Import extends Model {
 			if(substr($fn,-4)=='.txt'){				
 				$data=file_get_contents('data/'.$fn);
 				$adata=explode(chr(13).chr(10),$data);
-				foreach($adata as $d){
+
+				foreach($adata as $l=>$d){
 					$a=explode(',',$d);
+
 					if(count($a)>1){
+
 						DB::table('ztrade')->insert([
 						'code'=>$a[0],
 						'date'=>substr($a[1],0,4).'-'.substr($a[1],4,2).'-'.substr($a[1],6,2),
@@ -25,8 +28,10 @@ class Import extends Model {
 						'close'=>$a[5],
 						'volume'=>$a[6],
 						]);
+
 					}
 				}				
+
 			}
 
 		}
