@@ -55,9 +55,9 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'nasdaq'),
-			'username'  => env('DB_USERNAME', 'ahufzksewj'),
-			'password'  => env('DB_PASSWORD', 'JtWFkR2ztG'),
+			'database' => env('DB_DATABASE', 'gkzpgcyqsk'),
+			'username'  => env('DB_USERNAME', 'gkzpgcyqsk'),
+			'password'  => env('DB_PASSWORD', 'ktw7sTNXaJ'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
