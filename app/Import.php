@@ -17,7 +17,7 @@ class Import extends Model {
 				foreach($adata as $l=>$d){
 					$a=explode(',',$d);
 
-					if(count($a)>1){
+					if(count($a)>1 and trim($a[6])>0){
 
 						DB::table('ztrade')->insert([
 						'code'=>$a[0],
