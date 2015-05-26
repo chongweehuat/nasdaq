@@ -12,7 +12,7 @@ class Import extends Model {
 		foreach($adir as $k=>$fn){
 			if(substr($fn,-4)=='.txt'){				
 				$data=file_get_contents('data/'.$fn);
-				$adata=explode(chr(13).chr(10),$data);
+				$adata=explode(chr(10),$data);
 echo $k;
 echo ' / ';
 echo $fn;
@@ -32,7 +32,7 @@ echo '<br>';
 						'high'=>$a[3],
 						'low'=>$a[4],
 						'close'=>$a[5],
-						'volume'=>$a[6],
+						'volume'=>trim($a[6]),
 						]);
 
 					}
