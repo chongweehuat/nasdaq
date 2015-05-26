@@ -13,7 +13,13 @@ class Import extends Model {
 			if(substr($fn,-4)=='.txt'){				
 				$data=file_get_contents('data/'.$fn);
 				$adata=explode(chr(13).chr(10),$data);
-
+echo $k;
+echo ' / ';
+echo $fn;
+echo ' / ';
+echo count($adata);
+echo '<br>';
+/*
 				foreach($adata as $l=>$d){
 					$a=explode(',',$d);
 
@@ -31,7 +37,7 @@ class Import extends Model {
 
 					}
 				}				
-
+*/
 			}
 
 		}
